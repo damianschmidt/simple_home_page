@@ -1,0 +1,13 @@
+body {
+    background-color: #e2adff;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
