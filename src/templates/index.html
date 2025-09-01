@@ -4,31 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Damian Schmidt Portfolio</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="/static/js/fontawesome/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pastel-blue': '#B8D4F0',
+                        'pastel-purple': '#D4C5F9',
+                        'pastel-pink': '#F5C2C7',
+                        'pastel-green': '#C8E6C9',
+                        'soft-gray': '#8E9AAF',
+                        'light-gray': '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>Header</header>
-    <nav>
-        <ul>
-            <li>O mnie</li>
-            <li>Kontakt</li>
-            <li>Blog</li>
-        </ul>
-    </nav>
-    <div>
-        <a href="https://github.com/damianschmidt">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/damianschmidt">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="/static/cv.pdf">
-            <i class="fa-solid fa-file-text"></i>
-        </a>
-    </div>
-    <footer>
-        <p>&copy; 2025 Damian Schmidt</p>
+<body class="bg-gradient-to-br from-white via-light-gray to-pastel-blue/10 min-h-screen flex flex-col">
+
+    <main class="flex-1 flex flex-col items-center justify-center p-8">
+        <div class="mb-16 relative">
+            <div class="w-72 h-72 rounded-full bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink shadow-2xl p-1 overflow-hidden">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                    <img
+                        src="/static/img/profile.png"
+                        alt="Profile Picture"
+                        class="w-full h-full rounded-full object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                    >
+                    <div style="display:none" class="w-full h-full rounded-full bg-white flex items-center justify-center text-soft-gray text-4xl font-light">
+                        DS
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="mb-8">
+            <ul class="flex gap-6">
+                <li>
+                    <a href="#about" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
+                            <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
+                                <span class="text-soft-gray font-medium">O mnie</span>
+                            </div>
+                        </div>
+                        <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">O mnie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
+                            <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
+                                <span class="text-soft-gray font-medium">Kontakt</span>
+                            </div>
+                        </div>
+                        <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Kontakt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
+                            <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
+                                <span class="text-soft-gray font-medium">Blog</span>
+                            </div>
+                        </div>
+                        <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Blog</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-pastel-blue/20">
+        <div class="flex justify-center items-center gap-8">
+            <a
+                href="https://github.com/damianschmidt"
+                class="text-soft-gray text-3xl hover:text-pastel-purple transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+                href="https://linkedin.com/in/damianschmidt"
+                class="text-soft-gray text-3xl hover:text-pastel-blue transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            >
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+                href="/static/cv.pdf"
+                class="text-soft-gray text-3xl hover:text-pastel-green transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+            >
+                <i class="fa-solid fa-file-text"></i>
+            </a>
+        </div>
     </footer>
 </body>
 </html>
