@@ -56,38 +56,148 @@
         <nav class="mb-8">
             <ul class="flex gap-2 sm:gap-6 px-2 sm:px-0">
                 <li>
-                    <a href="#about" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
+                    <button onclick="openModal('aboutModal')" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
                                 <span class="text-soft-gray font-medium text-sm sm:text-base">O mnie</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">O mnie</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="#contact" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
+                    <button onclick="openModal('contactModal')" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
                                 <span class="text-soft-gray font-medium text-sm sm:text-base">Kontakt</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Kontakt</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="#blog" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
+                    <button onclick="openModal('blogModal')" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
                                 <span class="text-soft-gray font-medium text-sm sm:text-base">Blog</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Blog</span>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </nav>
     </main>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform scale-95 transition-transform duration-300 modal-content">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pastel-blue to-pastel-purple flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-user text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-soft-gray">Damian Schmidt</h3>
+                    </div>
+                    <button onclick="closeModal('aboutModal')" class="text-soft-gray/60 hover:text-soft-gray transition-colors">
+                        <i class="fa-solid fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-soft-gray/80 leading-relaxed">
+                        Lubię technologię i programowanie. Specjalizuję się w tworzeniu nowoczesnych aplikacji webowych.
+                    </p>
+                    <p class="text-sm text-soft-gray/70 leading-relaxed">
+                        Uwielbiam rozwiązywać problemy i tworzyć różne rzeczy - choć nie zawsze przydatne 😅
+                    </p>
+                    <p class="text-sm text-soft-gray/70 leading-relaxed">
+                        W wolnym czasie jeżdżę rowerem i interesuję się motoryzacją.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 bg-pastel-blue text-white rounded-full text-sm font-medium">Technologia</span>
+                        <span class="px-3 py-1 bg-pastel-purple text-white rounded-full text-sm font-medium">Aplikacje</span>
+                        <span class="px-3 py-1 bg-pastel-green text-white rounded-full text-sm font-medium">Zainteresowania</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform scale-95 transition-transform duration-300 modal-content">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pastel-green to-pastel-blue flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-envelope text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-soft-gray">Skontaktuj się ze mną</h3>
+                    </div>
+                    <button onclick="closeModal('contactModal')" class="text-soft-gray/60 hover:text-soft-gray transition-colors">
+                        <i class="fa-solid fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center p-3 bg-pastel-blue/10 rounded-lg">
+                        <i class="fa-solid fa-envelope w-5 text-pastel-blue mr-4"></i>
+                        <span class="text-soft-gray">damian.schmidt97@gmail.com</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-pastel-purple/10 rounded-lg">
+                        <i class="fa-solid fa-location-dot w-5 text-pastel-purple mr-4"></i>
+                        <span class="text-soft-gray">Kraków, Polska</span>
+                    </div>
+                    <div class="mt-6 p-4 bg-light-gray rounded-lg">
+                        <p class="text-sm text-soft-gray/80 leading-relaxed mb-3">
+                            Zachęcam do kontaktu poprzez LinkedIn lub maila.
+                        </p>
+                    </div>
+                    <div class="flex justify-center gap-2">
+                        <span class="px-3 py-1 bg-pastel-green text-white rounded-full text-sm font-medium">Media</span>
+                        <span class="px-3 py-1 bg-pastel-pink text-white rounded-full text-sm font-medium">Kontakt</span>
+                        <span class="px-3 py-1 bg-pastel-blue text-white rounded-full text-sm font-medium">Społeczność</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform scale-95 transition-transform duration-300 modal-content">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pastel-pink to-pastel-purple flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-pen-nib text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-soft-gray">Blog</h3>
+                    </div>
+                    <button onclick="closeModal('blogModal')" class="text-soft-gray/60 hover:text-soft-gray transition-colors">
+                        <i class="fa-solid fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-pastel-pink/20 to-pastel-purple/20 flex items-center justify-center">
+                        <i class="fa-solid fa-hammer text-pastel-purple text-3xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-soft-gray mb-3">Wkrótce dostępny!</h4>
+                    <p class="text-soft-gray/80 leading-relaxed mb-6">
+                        Pracuję nad blogiem, gdzie będę dzielić się swoimi doświadczeniami z programowania i najnowszymi trendami w technologii.
+                    </p>
+                    <div class="flex justify-center gap-2 mb-4">
+                        <span class="px-3 py-1 bg-pastel-pink text-white rounded-full text-sm font-medium">Programowanie</span>
+                        <span class="px-3 py-1 bg-pastel-purple text-white rounded-full text-sm font-medium">Notatki</span>
+                        <span class="px-3 py-1 bg-pastel-blue text-white rounded-full text-sm font-medium">Dzielenie wiedzą</span>
+                    </div>
+                    <p class="text-sm text-soft-gray/60">
+                        Śledź moje profile społecznościowe, aby być na bieżąco!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-pastel-blue/20">
         <div class="flex justify-center items-center gap-8">
