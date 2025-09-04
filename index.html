@@ -23,49 +23,63 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gradient-to-br from-white via-light-gray to-pastel-blue/10 min-h-screen flex flex-col">
 
-    <main class="flex-1 flex flex-col items-center justify-center">
-        <div class="mb-16 relative">
-            <div class="w-72 h-72 rounded-full bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink shadow-2xl p-1 overflow-hidden">
-                <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+    <main class="flex-1 flex flex-col items-center justify-center px-4">
+        <div class="mb-8 sm:mb-16 relative">
+            <div class="w-48 h-48 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink shadow-2xl p-1 overflow-hidden">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden eye-container">
                     <img
-                        src="img/profile.png"
+                        id="profile-picture"
+                        src="img/profile_new.png"
                         alt="Profile Picture"
-                        class="w-60 h-60 object-cover"
+                        class="w-40 h-40 sm:w-60 sm:h-60 object-cover"
+                    >
+                    <img
+                        id="left-eye"
+                        src="img/left_eye.png"
+                        alt="Left Eye"
+                        class="eye pointer-events-none z-10"
+                    >
+                    <img
+                        id="right-eye"
+                        src="img/right_eye.png"
+                        alt="Right Eye"
+                        class="eye pointer-events-none z-10"
                     >
                 </div>
             </div>
         </div>
 
         <nav class="mb-8">
-            <ul class="flex gap-6">
+            <ul class="flex gap-2 sm:gap-6 px-2 sm:px-0">
                 <li>
-                    <a href="#about" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                    <a href="#about" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
-                                <span class="text-soft-gray font-medium">O mnie</span>
+                                <span class="text-soft-gray font-medium text-sm sm:text-base">O mnie</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">O mnie</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                    <a href="#contact" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
-                                <span class="text-soft-gray font-medium">Kontakt</span>
+                                <span class="text-soft-gray font-medium text-sm sm:text-base">Kontakt</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Kontakt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#blog" class="px-8 py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group">
+                    <a href="#blog" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl relative group text-sm sm:text-base">
                         <div class="absolute inset-0 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px]">
                             <div class="bg-white rounded-[10px] w-full h-full flex items-center justify-center">
-                                <span class="text-soft-gray font-medium">Blog</span>
+                                <span class="text-soft-gray font-medium text-sm sm:text-base">Blog</span>
                             </div>
                         </div>
                         <span class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">Blog</span>

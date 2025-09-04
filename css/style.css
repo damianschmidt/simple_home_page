@@ -1,0 +1,20 @@
+.eye-container {
+    position: relative;
+}
+
+#left-eye {
+    position: absolute;
+    top: 38%;
+    left: 32%;
+}
+
+#right-eye {
+    position: absolute;
+    top: 38.5%;
+    left: 49%;
+}
+
+.eye {
+    width: clamp(16px, 4vw, 24px);
+    height: clamp(16px, 4vw, 24px);
+}
