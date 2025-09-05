@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Damian Schmidt Portfolio</title>
+    <title>Damian Schmidt</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="js/fontawesome/all.min.js"></script>
     <script src="js/script.js"></script>
@@ -18,6 +18,15 @@
                         'pastel-green': '#C8E6C9',
                         'soft-gray': '#8E9AAF',
                         'light-gray': '#F8F9FA',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
                     }
                 }
             }
@@ -29,7 +38,7 @@
 <body class="bg-gradient-to-br from-white via-light-gray to-pastel-blue/10 min-h-screen flex flex-col">
 
     <main class="flex-1 flex flex-col items-center justify-center px-4">
-        <div class="mb-8 sm:mb-16 relative">
+        <div class="mb-8 sm:mb-16 relative animate-fade-in">
             <div class="w-48 h-48 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink shadow-2xl p-1 overflow-hidden">
                 <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden eye-container">
                     <img
@@ -54,7 +63,7 @@
             </div>
         </div>
 
-        <nav class="mb-8">
+        <nav class="mb-8 fade-in-element animate-fade-in">
             <ul class="flex gap-2 sm:gap-6 px-2 sm:px-0">
                 <li>
                     <button onclick="openModal('aboutModal')" class="px-3 sm:px-8 py-2 sm:py-3 bg-white hover:bg-gray-50 rounded-xl text-soft-gray font-medium transition-all duration-300 shadow-lg hover:shadow-xl relative group text-sm sm:text-base cursor-pointer">
@@ -200,7 +209,7 @@
         </div>
     </div>
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-pastel-blue/20">
+    <footer class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-pastel-blue/20 fade-in-element animate-fade-in">
         <div class="flex justify-center items-center gap-8">
             <a
                 target="_blank"
